@@ -1,0 +1,277 @@
+@import "tailwindcss";
+
+@theme {
+  --animate-progress-loop: progress-loop 1.5s infinite ease-in-out;
+  @keyframes progress-loop {
+    0% { transform: translateX(-150%); }
+    100% { transform: translateX(350%); }
+  }
+}
+
+/* ─── BESPOKE ULTRA-HIGH CONTRAST DARK MODE THEME FOR PORTALS ─── */
+.dark-theme-active {
+  background-color: #080d1a !important;
+  color: #f8fafc !important;
+  color-scheme: dark;
+}
+
+/* Base text overrides inside dark portal */
+.dark-theme-active,
+.dark-theme-active h1,
+.dark-theme-active h2,
+.dark-theme-active h3,
+.dark-theme-active h4,
+.dark-theme-active h5,
+.dark-theme-active h6 {
+  color: #f8fafc !important;
+}
+
+/* High contrast headings and dark text utilities */
+.dark-theme-active [class*="text-slate-9"],
+.dark-theme-active [class*="text-slate-8"],
+.dark-theme-active [class*="text-gray-9"],
+.dark-theme-active [class*="text-gray-8"],
+.dark-theme-active [class*="text-zinc-9"],
+.dark-theme-active [class*="text-zinc-8"],
+.dark-theme-active [class*="text-neutral-9"],
+.dark-theme-active [class*="text-neutral-8"],
+.dark-theme-active [class*="text-[#0c2340]"],
+.dark-theme-active [class*="text-[#0a192f]"],
+.dark-theme-active .text-black,
+.dark-theme-active .text-slate-900,
+.dark-theme-active .text-slate-800,
+.dark-theme-active .text-gray-900,
+.dark-theme-active .text-gray-800 {
+  color: #f8fafc !important;
+}
+
+/* Medium-contrast secondary text */
+.dark-theme-active [class*="text-slate-7"],
+.dark-theme-active [class*="text-slate-6"],
+.dark-theme-active [class*="text-slate-5"],
+.dark-theme-active [class*="text-gray-7"],
+.dark-theme-active [class*="text-gray-6"],
+.dark-theme-active [class*="text-gray-5"],
+.dark-theme-active .text-slate-700,
+.dark-theme-active .text-slate-600,
+.dark-theme-active .text-slate-500,
+.dark-theme-active .text-gray-700,
+.dark-theme-active .text-gray-600,
+.dark-theme-active .text-gray-500 {
+  color: #cbd5e1 !important;
+}
+
+/* Muted slate text */
+.dark-theme-active [class*="text-slate-4"],
+.dark-theme-active [class*="text-gray-4"],
+.dark-theme-active .text-slate-400,
+.dark-theme-active .text-gray-400 {
+  color: #94a3b8 !important;
+}
+
+/* Electric Accent Text colors on dark background */
+.dark-theme-active .text-blue-600,
+.dark-theme-active .text-blue-700,
+.dark-theme-active .text-blue-800,
+.dark-theme-active [class*="text-blue-6"],
+.dark-theme-active [class*="text-blue-7"] {
+  color: #38bdf8 !important;
+}
+
+.dark-theme-active .text-indigo-600,
+.dark-theme-active .text-indigo-700,
+.dark-theme-active [class*="text-indigo-6"],
+.dark-theme-active [class*="text-indigo-7"] {
+  color: #818cf8 !important;
+}
+
+.dark-theme-active .text-emerald-600,
+.dark-theme-active .text-emerald-700,
+.dark-theme-active [class*="text-emerald-6"],
+.dark-theme-active [class*="text-emerald-7"] {
+  color: #34d399 !important;
+}
+
+.dark-theme-active .text-amber-600,
+.dark-theme-active .text-amber-500,
+.dark-theme-active .text-amber-700,
+.dark-theme-active .text-yellow-500 {
+  color: #facc15 !important;
+}
+
+.dark-theme-active .text-rose-600,
+.dark-theme-active .text-rose-700,
+.dark-theme-active .text-red-600 {
+  color: #f87171 !important;
+}
+
+/* Card & Background Surface overrides (Solid white & slate backgrounds -> dark slate) */
+.dark-theme-active .bg-white,
+.dark-theme-active .bg-slate-50,
+.dark-theme-active .bg-slate-100,
+.dark-theme-active .bg-slate-200,
+.dark-theme-active .bg-gray-50,
+.dark-theme-active .bg-gray-100,
+.dark-theme-active .bg-gray-200,
+.dark-theme-active [class*="bg-white"],
+.dark-theme-active [class*="bg-slate-50"],
+.dark-theme-active [class*="bg-slate-100"],
+.dark-theme-active [class*="bg-slate-200"],
+.dark-theme-active [class*="bg-gray-50"],
+.dark-theme-active [class*="bg-gray-100"],
+.dark-theme-active header,
+.dark-theme-active nav,
+.dark-theme-active footer {
+  background-color: #111a2e !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Arbitrary Light Hex Backgrounds -> Dark slate (#17243c) */
+.dark-theme-active [class*="bg-[#F8FAFC]"],
+.dark-theme-active [class*="bg-[#f8fafc]"],
+.dark-theme-active [class*="bg-[#f8fafd]"],
+.dark-theme-active [class*="bg-[#f1f5f9]"],
+.dark-theme-active [class*="bg-[#F1F5F9]"],
+.dark-theme-active [class*="bg-[#fafafa]"],
+.dark-theme-active [class*="bg-[#fcfcff]"],
+.dark-theme-active [class*="bg-[#EFF6FF]"],
+.dark-theme-active [class*="bg-[#F0F9FF]"],
+.dark-theme-active [class*="bg-[#DBEAFE]"],
+.dark-theme-active [class*="bg-[#E2E8F0]"] {
+  background-color: #17243c !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Tint Badges & Action Pills in Dark Mode */
+.dark-theme-active .bg-blue-50,
+.dark-theme-active [class*="bg-blue-50"],
+.dark-theme-active [class*="bg-blue-100"] {
+  background-color: rgba(14, 116, 144, 0.28) !important;
+  border: 1px solid rgba(56, 189, 248, 0.25) !important;
+  color: #38bdf8 !important;
+}
+
+.dark-theme-active .bg-indigo-50,
+.dark-theme-active [class*="bg-indigo-50"],
+.dark-theme-active [class*="bg-indigo-100"] {
+  background-color: rgba(67, 56, 202, 0.28) !important;
+  border: 1px solid rgba(129, 140, 248, 0.25) !important;
+  color: #818cf8 !important;
+}
+
+.dark-theme-active .bg-emerald-50,
+.dark-theme-active [class*="bg-emerald-50"],
+.dark-theme-active [class*="bg-emerald-100"],
+.dark-theme-active .bg-teal-50 {
+  background-color: rgba(6, 95, 70, 0.3) !important;
+  border: 1px solid rgba(52, 211, 153, 0.25) !important;
+  color: #34d399 !important;
+}
+
+.dark-theme-active .bg-amber-50,
+.dark-theme-active [class*="bg-amber-50"],
+.dark-theme-active [class*="bg-amber-100"] {
+  background-color: rgba(146, 64, 14, 0.3) !important;
+  border: 1px solid rgba(250, 204, 21, 0.25) !important;
+  color: #facc15 !important;
+}
+
+.dark-theme-active .bg-rose-50,
+.dark-theme-active [class*="bg-rose-50"],
+.dark-theme-active .bg-red-50 {
+  background-color: rgba(159, 18, 57, 0.3) !important;
+  border: 1px solid rgba(248, 113, 113, 0.25) !important;
+  color: #f87171 !important;
+}
+
+.dark-theme-active .bg-purple-50,
+.dark-theme-active [class*="bg-purple-50"] {
+  background-color: rgba(107, 33, 168, 0.3) !important;
+  border: 1px solid rgba(192, 132, 252, 0.25) !important;
+  color: #c084fc !important;
+}
+
+/* Linear and Radial Gradients in Dark Mode */
+.dark-theme-active [class*="from-blue-"],
+.dark-theme-active [class*="from-indigo-"],
+.dark-theme-active [class*="from-slate-"],
+.dark-theme-active [class*="from-gray-"] {
+  --tw-gradient-from: #132038 !important;
+  --tw-gradient-to: rgba(19, 32, 56, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-from), var(--tw-gradient-to)) !important;
+}
+
+.dark-theme-active [class*="to-blue-"],
+.dark-theme-active [class*="to-indigo-"],
+.dark-theme-active [class*="to-slate-"],
+.dark-theme-active [class*="to-gray-"] {
+  --tw-gradient-to: #1a2a47 !important;
+}
+
+/* Borders across all cards & elements */
+.dark-theme-active .border-slate-100,
+.dark-theme-active .border-slate-200,
+.dark-theme-active .border-slate-200\/80,
+.dark-theme-active .border-slate-300,
+.dark-theme-active .border-gray-100,
+.dark-theme-active .border-gray-200,
+.dark-theme-active .border-white,
+.dark-theme-active [class*="border-slate-"],
+.dark-theme-active [class*="border-gray-"] {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Header logo span "Hospyn" in FallbackImage */
+.dark-theme-active #header-logo span,
+.dark-theme-active #header-logo .text-\[\#0c2340\] {
+  color: #f8fafc !important;
+}
+
+/* Inputs, Selects, Textareas */
+.dark-theme-active input,
+.dark-theme-active select,
+.dark-theme-active textarea {
+  background-color: #17243c !important;
+  color: #f8fafc !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.dark-theme-active input::placeholder,
+.dark-theme-active textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Modals & Backdrop Overlays */
+.dark-theme-active .fixed.inset-0.bg-black\/50,
+.dark-theme-active .fixed.inset-0.bg-black\/60,
+.dark-theme-active .fixed.inset-0.bg-slate-900\/60 {
+  background-color: rgba(2, 6, 23, 0.85) !important;
+  backdrop-filter: blur(4px);
+}
+
+/* Shadows in dark mode -> Deep dark shadow instead of light grey halos */
+.dark-theme-active .shadow-sm,
+.dark-theme-active .shadow-md,
+.dark-theme-active .shadow-lg,
+.dark-theme-active .shadow-xl,
+.dark-theme-active .shadow-2xl,
+.dark-theme-active [class*="shadow-blue-"],
+.dark-theme-active [class*="shadow-indigo-"],
+.dark-theme-active [class*="shadow-purple-"],
+.dark-theme-active [class*="shadow-slate-"] {
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* SVG stroke & fill corrections for dark mode icons */
+.dark-theme-active svg.text-slate-900,
+.dark-theme-active svg.text-slate-800,
+.dark-theme-active svg.text-slate-700 {
+  color: #f8fafc !important;
+}
+
+/* Bottom navigation bar in dark mode */
+.dark-theme-active nav.fixed.bottom-0,
+.dark-theme-active .fixed.bottom-0 {
+  background-color: #0f172a !important;
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+}

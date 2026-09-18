@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Squircle Subtle Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f8fafc" />
+    </linearGradient>
+
+    <!-- Outer Squircle Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+
+    <!-- Top Petal Radiant Cyan-to-Cobalt Gradient -->
+    <linearGradient id="petalTopGrad" x1="256" y1="84" x2="256" y2="204" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#0084ff" />
+      <stop offset="100%" stop-color="#0052d4" />
+    </linearGradient>
+
+    <!-- Bottom Petal Radiant Cyan-to-Cobalt Gradient -->
+    <linearGradient id="petalBottomGrad" x1="256" y1="216" x2="256" y2="336" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#0078ff" />
+      <stop offset="100%" stop-color="#004bcc" />
+    </linearGradient>
+
+    <!-- Left Petal Radiant Cyan-to-Cobalt Gradient -->
+    <linearGradient id="petalLeftGrad" x1="130" y1="170" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#0080ff" />
+      <stop offset="100%" stop-color="#0052d4" />
+    </linearGradient>
+
+    <!-- Right Petal Radiant Cyan-to-Cobalt Gradient -->
+    <linearGradient id="petalRightGrad" x1="262" y1="170" x2="382" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00d2ff" />
+      <stop offset="50%" stop-color="#0080ff" />
+      <stop offset="100%" stop-color="#0052d4" />
+    </linearGradient>
+
+    <!-- 3D Elevation Soft Shadow for Petals -->
+    <filter id="petalShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0052d4" flood-opacity="0.22" />
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#071732" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Clean Light White Squircle Base -->
+  <rect x="12" y="12" width="488" height="488" rx="114" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="2.5" />
+
+  <!-- 4-Petal Hospyn Brand Mark -->
+  <g filter="url(#petalShadow)">
+    <!-- Top Vertical Petal -->
+    <ellipse cx="256" cy="144" rx="40" ry="58" fill="url(#petalTopGrad)" />
+
+    <!-- Bottom Vertical Petal -->
+    <ellipse cx="256" cy="276" rx="40" ry="58" fill="url(#petalBottomGrad)" />
+
+    <!-- Left Horizontal Petal -->
+    <ellipse cx="190" cy="210" rx="58" ry="40" fill="url(#petalLeftGrad)" />
+
+    <!-- Right Horizontal Petal -->
+    <ellipse cx="322" cy="210" rx="58" ry="40" fill="url(#petalRightGrad)" />
+  </g>
+
+  <!-- Bold Hospyn Navy Wordmark -->
+  <text x="256" y="394" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="82" fill="#071732" letter-spacing="-1.5">Hospyn</text>
+</svg>

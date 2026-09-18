@@ -1,0 +1,11 @@
+{
+  "name": "Remix Remix: Hospyn",
+  "description": "AI-driven mobile platform connecting patients and doctors for seamless appointments, medical record management, and intelligent health tracking.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
