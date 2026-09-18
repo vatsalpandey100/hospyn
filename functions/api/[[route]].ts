@@ -84,8 +84,8 @@ function getOfflineMedicalSummary(query: string): { text: string; sources: { tit
 }
 
 // Call Google Gemini REST API with multiple model fallbacks
-async function callGeminiAPI(apiKey: string, payload: any, preferredModel = "gemini-2.5-flash"): Promise<any> {
-  const models = [preferredModel, "gemini-1.5-flash", "gemini-2.0-flash", "gemini-2.5-pro"];
+async function callGeminiAPI(apiKey: string, payload: any, preferredModel = "gemini-1.5-flash"): Promise<any> {
+  const models = Array.from(new Set([preferredModel, "gemini-1.5-flash", "gemini-2.0-flash", "gemini-1.5-pro"]));
   let lastError: any = null;
 
   for (const model of models) {

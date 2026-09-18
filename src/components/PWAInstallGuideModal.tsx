@@ -77,8 +77,8 @@ export const PWAInstallGuideModal: React.FC<PWAInstallGuideModalProps> = ({
 
           {/* App Branding Badge */}
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-12 h-12 rounded-2xl bg-white p-1.5 shadow-lg flex items-center justify-center">
-              <img src="/icon.svg" alt="Hospyn Logo" className="w-full h-full object-contain" />
+            <div className="w-12 h-12 rounded-2xl bg-white p-1 shadow-lg flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="Hospyn Logo" className="w-full h-full object-contain" />
             </div>
             <div>
               <div className="flex items-center gap-1.5">
