@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.hospyn.app",
+        "sha256_cert_fingerprints": ["35:83:33:D7:19:14:DE:09:7F:C7:83:0B:61:6B:61:8F:24:B4:38:84:89:4C:D4:2E:3B:F2:8F:58:A0:A4:B7:38"]
+      }
+    }]

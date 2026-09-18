@@ -114,15 +114,26 @@ export const PWAInstallGuideModal: React.FC<PWAInstallGuideModalProps> = ({
           </div>
         ) : (
           <div className="p-5 flex flex-col space-y-4 max-h-[75vh] overflow-y-auto">
+            {/* Direct Download Android APK Button */}
+            <a
+              href="/hospyn.apk"
+              download="Hospyn.apk"
+              className="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-extrabold text-sm py-3.5 px-4 rounded-2xl shadow-lg shadow-emerald-500/25 flex items-center justify-center gap-2.5 transition-all active:scale-[0.98] cursor-pointer text-center no-underline"
+              id="btn-direct-download-apk"
+            >
+              <Download className="w-5 h-5 stroke-[2.5]" />
+              <span>{isHindi ? "📱 Android ऐप (.APK) डाउनलोड करें (1.2 MB)" : "📱 Download Android App (.APK - 1.2 MB)"}</span>
+            </a>
+
             {/* Direct 1-Click Install Button (if browser prompt is ready) */}
             {isInstallable && (
               <button
                 onClick={handleDirectInstall}
-                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-sm py-3.5 px-4 rounded-2xl shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98] cursor-pointer"
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-sm py-3 px-4 rounded-2xl shadow-md flex items-center justify-center gap-2 transition-all active:scale-[0.98] cursor-pointer"
                 id="btn-direct-install-pwa"
               >
-                <Download className="w-4.5 h-4.5 stroke-[2.5]" />
-                <span>{isHindi ? "⚡ एक क्लिक में इंस्टॉल करें" : "⚡ One-Click Direct Install"}</span>
+                <Sparkles className="w-4.5 h-4.5" />
+                <span>{isHindi ? "⚡ ब्राउज़र में सीधे इंस्टॉल करें (PWA)" : "⚡ Direct 1-Click Web App Install (PWA)"}</span>
               </button>
             )}
 

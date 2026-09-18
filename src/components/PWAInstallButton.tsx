@@ -21,15 +21,27 @@ export const PWAInstallButton: React.FC<PWAInstallButtonProps> = ({
   const [showGuideModal, setShowGuideModal] = useState(false);
   const isHindi = language === "hi";
 
+  const triggerApkDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/hospyn.apk";
+    link.download = "Hospyn.apk";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const handleClick = async () => {
+    // 1. If native 1-click browser install prompt is supported by browser, trigger it directly!
     if (isInstallable) {
       const outcome = await install();
-      if (!outcome) {
-        setShowGuideModal(true);
+      if (outcome) {
+        return;
       }
-    } else {
-      setShowGuideModal(true);
     }
+
+    // 2. Otherwise directly download the Android APK file immediately
+    triggerApkDownload();
+    setShowGuideModal(true);
   };
 
   // If already installed in standalone mode
